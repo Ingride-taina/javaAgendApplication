@@ -240,7 +240,7 @@ public class TabelaContatos extends javax.swing.JFrame {
         
         
         listaContatos.setRowSorter(sort);
-            sort.setRowFilter(RowFilter.regexFilter("(?i)"+ textoBusca) );
+            sort.setRowFilter(RowFilter.regexFilter("(?i)"+ textoBusca, 0,1,2,3,9) );
         }
      
     }//GEN-LAST:event_searchButtomActionPerformed
@@ -252,7 +252,9 @@ public class TabelaContatos extends javax.swing.JFrame {
 
     private void updateButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtomActionPerformed
         carregarTabela(agenda);
+        JOptionPane.showMessageDialog(this,"Lista Atualizada");
         listaContatos.setRowSorter(null);
+
     }//GEN-LAST:event_updateButtomActionPerformed
 
     /**
